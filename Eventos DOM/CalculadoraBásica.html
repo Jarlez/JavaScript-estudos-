@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando números</title>
+
+    <style>
+        body {
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+        
+        h2 {
+            font: normal 15pt Arial;
+        }
+        
+        input {
+            font: normal 18pt Arial;
+            width: 200px
+        }
+        
+        div#res {
+            margin-top: 20px;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Calculadora Básica</h1>
+    <h2> Aqui você vai conseguir realizar as 4 operações matemáticas básicas</h2>
+
+    <input type="number" name="txtn1" id="txtn1">
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Calcular" onclick="calcular()">
+    <div id="res">Resultados</div>
+
+    <script>
+        function calcular() {
+
+            var tn1 = window.document.getElementById('txtn1')
+            var tn2 = window.document.getElementById('txtn2')
+            var res = window.document.getElementById('res')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+            var so = n1 + n2
+            var su = n1 - n2
+            var mu = n1 * n2
+            var di = n1 / n2
+            var tot = so + su + mu + di
+            res.innerHTML = `A soma entre ${n1} + ${n2} é igual a <strong> ${so} </strong> 
+             <br> A subtração entre entre ${n1} - ${n2} é igual a <strong> ${su} </strong>
+             <br> A multiplicação entre entre ${n1} x ${n2} é igual a <strong> ${mu} </strong>
+             <br> A divisão entre entre ${n1} / ${n2} é igual a <strong> ${di} </strong>
+             <br> A soma de todos esses resultados é igual a <strong> ${tot} </strong> `
+
+            display_image('https://a-static.mlcdn.com.br/1500x1500/adesivo-50x47cm-thumbs-up-joia-joinha-ok-emoticon-emoji-ref-ade3011-nebula-decor/nebuladecor/8876bc8c87b111ebb5c54201ac1850e0/01674f598add090b19419896a1ef7913.jpg',
+                700,
+                500,
+                'JavaScriptImage');
+
+        }
+
+        function display_image(src, width, height, alt) {
+            var a = document.createElement("img");
+            a.src = src;
+            a.width = width;
+            a.height = height;
+            a.alt = alt;
+            document.body.appendChild(a);
+
+        }
+    </script>
+
+
+</body>
+
+</html>

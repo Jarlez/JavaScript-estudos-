@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> Iniciando estudos DOM</h1>
+    <p> Parágrafo 0</p>
+    <p> Paragrafo 1 <strong>DOM</strong> no JavaScript.</p>
+    <div id="msg"> Clique Aqui</div>
+    <script>
+        var p1 = window.document.getElementsByTagName('p')[1] // 0 é o primeiro paragrafo, segundo é 1
+        var p0 = window.document.getElementsByTagName('p')[0]
+        var corpo = window.document.body
+        var d = window.document.getElementById('msg')
+        corpo.style.background = 'grey'
+        window.document.write(window.document.URL) // informa url do site
+        window.document.write('Está escrito assim : ' + p1.innerText) // mostra na tela
+        window.document.write('Está escrito assim : ' + p0.innerText)
+        d.style.background = 'green'
+        d.innerText = 'estou aguardando' // alterei a variavel da div
+    </script>
+</body>
+
+</html>

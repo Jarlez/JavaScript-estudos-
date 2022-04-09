@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        body {
+            font: normal 18pt Arial;
+            text-align: center;
+        }
+        
+        input {
+            font: normal 18pt Arial;
+            width: 200px
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Descubra sua nacionalidade</h1>
+    <h2> Qual o seu país?</h2>
+
+    <input type="text" name="txt1" id="txt1">
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res"> </div>
+
+    <script>
+        function calcular() {
+
+            var txt = window.document.querySelector('input#txt1')
+            var res = window.document.querySelector('div#res')
+            var nac = String(txt.value)
+
+            res.innerHTML = `<p>Seu pais é ${nac}</p>`
+
+            if (nac == 'Brasil' || nac == 'brasil' || nac == 'br' || nac == 'Br' || nac == 'BRASIL') {
+                res.innerHTML += `<p>Você é Brasileiro</p>`
+
+            } else {
+                res.innerHTML += `<p>Você é estrangeiro.</p>`
+            }
+
+
+
+
+        }
+    </script>
+
+
+
+</body>
+
+</html>
